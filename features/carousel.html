@@ -1,0 +1,45 @@
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li 
+    	ng-repeat="item in items"
+    	data-target="#myCarousel"
+    	data-slide-to="{{$index}}"
+    	ng-class="{active: $first}"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div ng-repeat="item in items"
+    	ng-class="{'carousel-item': true, active: $first}">
+      <img ng-src="{{item.img}}" alt="{{item.alt}}">
+      <div class="carousel-caption">
+      	<h5>{{item.caption}}</h5>
+      </div>
+    </div>
+    
+  </div>
+
+  <a class="carousel-control-prev"
+  	 role="button"
+  	 data-slide-to="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next"
+  	role="button"
+  	data-slide-to="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<script type="text/javascript">
+    // Carousel functions
+    $(document).ready(function(){
+    // Enable Carousel Controls
+    $(".carousel-control-prev").click(function(){
+      $("#myCarousel").carousel("prev");
+    });
+    $(".carousel-control-next").click(function(){
+      $("#myCarousel").carousel("next");
+    });
+  });
+</script>

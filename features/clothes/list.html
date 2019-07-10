@@ -1,0 +1,19 @@
+<md-content style="background-color: white;">
+
+    <md-virtual-repeat-container id="vertical-container" style="height: 100vh; text-align: center;">
+        <div md-virtual-repeat="item in clothes" class="repeated-item" flex>
+            <hr/>
+            <div ng-click="go('/details/'+item.id)">
+
+                <img ng-src="{{ item.url }}" style="cursor: pointer;">
+                <h3 style="font-size: 14px;">{{ item.name }}</h3>
+
+            </div>
+        </div>
+
+    </md-virtual-repeat-container>
+
+    <div ng-click="gotoTop()" class="btt-btn" style="position: fixed; right: 18px; color: black; border: none; bottom: 15px;">
+        <i class="material-icons">&#xE316;</i>
+    </div>
+</md-content>

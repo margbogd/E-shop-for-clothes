@@ -1,0 +1,25 @@
+<md-content style="background-color: white;">
+    <div id="main-details" style="text-align: left; margin-left: 36px; margin-top: 18px;">
+        <h3 style="font-size: 18px;">{{ cloth.name }}</h3>
+        <h4 style="font-size: 10px; color: gray;">{{ cloth.id }}</h4>
+        <h5 style="font-size: 10px; color: gray;">{{ cloth.category }}</h5>
+    </div>
+    <div id="image" style="text-align: center; margin-top: 20px;">
+        <img ng-src="{{ cloth.url }}">
+    </div>
+    <div id="details" style="text-align: center; margin-top: 20px;">
+        <h3 style="font-size: 14px; text-align: left; margin-left: 36px;"><u>Description:</u><br/> {{ cloth.description }}</h3>
+        <h5 style="font-size: 12px; text-align: left; margin-left: 36px;">Sizes available: {{ cloth.size }}</h5>
+        <h5 style="font-size: 12px; text-align: left; margin-left: 36px;">{{ cloth.color }}</h5>
+        <h3 style="font-size: 18px; text-align: right; margin-right: 36px;">{{ cloth.price }}</h3>
+    </div>
+    <!-- Buy button -->
+    <md-button class="md-raised md-warn" ng-click="addItem(cloth)" style="font-size: 14px; float: right; margin-right: 36px; border-radius: 11%; background-color: #00AA5B;">
+        {{ button_buy }}
+    </md-button>
+    <!-- Go back to the list -->
+    <button ng-click="goBack(cloth.category)" style="float: left; margin-left: 36px; margin-top: 10px; background-color: white; border: none;">
+        <i class="fas fa-angle-left"></i>
+    </button>
+
+</md-content>

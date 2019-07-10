@@ -1,0 +1,190 @@
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+
+/* Portrait */
+@media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 568px)
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: portrait) {
+      div#myCarousel {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+      }
+      #home {
+        margin-left: 4.5em;
+      }
+      .sub-title {
+        padding-left: 38% !important;
+      }
+      .buttons {
+        padding-top: 75% !important;
+      }
+
+}
+
+/* Landscape */
+@media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 568px)
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: landscape) {
+   /*     .buttons {
+            padding-top: none;
+        }
+        .carousel-inner {
+            margin-left: 17%;
+        }
+        .sub-title {
+            margin-left: 43%;
+        }
+        #carousel-caption {
+            margin-right: 36%;
+        }
+        #home {
+            margin-right: 84%;
+        }*/
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- 
+
+/* Portrait */
+@media only screen
+    and (min-device-width: 375px)
+    and (max-device-width: 667px)
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: portrait) {
+      div#myCarousel {
+        padding-left: 16px !important;
+      }
+      #delivery h2 .sub-title {
+        padding-left: 14.5em !important;
+      }
+      #home {
+        margin-left: 5px;
+      }
+}
+
+/* Landscape */
+@media only screen
+    and (min-device-width: 375px)
+    and (max-device-height: 667px)
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: landscape) {
+        .carousel-caption {
+            padding-right: 20em !important; 
+        }
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait */
+@media only screen
+    and (min-device-width: 414px)
+    and (max-device-width: 736px)
+    and (-webkit-min-device-pixel-ratio: 3)
+    and (orientation: portrait) {
+
+}
+
+/* Landscape */
+@media only screen
+    and (min-device-width: 414px)
+    and (max-device-width: 736px)
+    and (-webkit-min-device-pixel-ratio: 3)
+    and (orientation: landscape) {
+    
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait */
+@media only screen
+    and (min-device-width: 375px)
+    and (max-device-width: 812px)
+    and (-webkit-min-device-pixel-ratio: 3)
+    and (orientation: portrait) {
+     
+}
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 812px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) {
+
+
+}
+
+/* ----------- Galaxy S3 ----------- */
+
+/* Portrait and Landscape */
+@media screen
+  and (device-width: 360px)
+  and (device-height: 640px)
+  and (-webkit-device-pixel-ratio: 2) {
+  
+}
+
+/* Portrait */
+@media screen
+  and (device-width: 320px)
+  and (device-height: 640px)
+  and (-webkit-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+}
+
+/* Landscape */
+@media screen
+  and (device-width: 320px)
+  and (device-height: 640px)
+  and (-webkit-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+}
+
+/* ----------- Galaxy S4, S5 and Note 3 ----------- */
+
+/* Portrait */
+@media screen
+  and (device-width: 320px)
+  and (device-height: 640px)
+  and (-webkit-device-pixel-ratio: 3)
+  and (orientation: portrait) {
+
+}
+
+/* Landscape */
+@media screen
+  and (device-width: 320px)
+  and (device-height: 640px)
+  and (-webkit-device-pixel-ratio: 3)
+  and (orientation: landscape) {
+
+}
+
+/* ----------- Windows Phone ----------- */
+
+/* Portrait */
+@media screen
+  and (device-width: 480px)
+  and (device-height: 800px)
+  and (orientation: portrait) {
+    .carousel-inner {
+        margin-left: 3%;
+    }
+    .sub-title {
+        margin-left: 6%;
+    }
+    #home {
+        margin-left: 318%;
+    }
+}
+
+/* Landscape */
+@media screen
+  and (device-width: 480px)
+  and (device-height: 800px)
+  and (orientation: landscape) {
+
+}

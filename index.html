@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html ng-app="eshop">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title ng-bind="title">MyApp - Welcome</title>
+
+    <link rel="stylesheet" type="text/css" href="css/home.css" />
+
+    <!-- Bootstrap style sheet -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Bootstrap required libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.7/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.7/angular-animate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.7/angular-aria.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.7/angular-messages.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.7/angular-cookies.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.7/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.7/angular-sanitize.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.22/angular-ui-router.js"></script>
+
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/svg-assets-cache.js"></script>
+
+    <!-- IONIC -->
+    <script src="http://code.ionicframework.com/1.3.3/js/ionic.js"></script>
+    <script src="http://code.ionicframework.com/1.3.3/js/ionic-angular.js"></script>
+
+    <!-- Angular Material Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.13/angular-material.js"></script>
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <!-- Angular Material style sheet -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.13/angular-material.min.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/1.3.3/css/ionic.css">
+    <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+
+    <!-- <script src="cordova.js"></script> -->
+</head>
+
+<body ng-controller="MainController" ng-cloak>
+
+    <ion-pane class="mycontainer">
+        <ion-side-menus>
+            <ion-side-menu-content>
+
+                <ion-header-bar class="bar-positive">
+                    <div class="drawer">
+                        <button class="button icon button-clear ion-navicon-round" ng-click="toggleLeft()"></button>
+                    </div>
+                    <h1 class="title">Vintage Violet</h1>
+                    <!-- Shopping cart button -->
+                    <md-button class="shop-cart" id="shopping_cart" style="font-size: 26px; padding-left: 68%;">
+                                <ion-icon name="cart" aria-label="cart"></ion-icon>
+                                <span style="font-size: 20px;">{{ cart.length }}</span>
+                            </md-button>
+                </ion-header-bar>
+
+                <div id="delivery" class="bar bar-subheader bar-stable" style="height: 22px;">
+                    <h2 class="sub-title" style="font-size: 10px; padding-left: 11em;">
+                        <ion-icon name="cube"></ion-icon>
+                        Free Delivery
+                    </h2>
+                </div>
+
+                <ion-content style="margin-top: 25px; margin-bottom: 54px;">
+
+                    <div ng-view></div>
+
+                </ion-content>
+
+
+                <div class="bar bar-footer bar-positive">
+
+                    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+
+                            <md-button id="home" href="#" style="font-size: 26px;">
+                                <ion-icon name="home" aria-label="home"></ion-icon>
+                            </md-button>
+
+                    </section>
+
+                </div>
+            </ion-side-menu-content>
+
+
+            <ion-side-menu side="left">
+                <ion-list>
+                    <h1 class="sidemenu-title" style="font-size: 18px; margin-left: 12px; padding-top: 16px; letter-spacing: 1px;">Shopping:</h1>
+                </ion-list>
+                <ion-list>
+                    <ion-item class="btn-women" ng-click="go('/women')">Women</ion-item>
+                </ion-list>
+                <ion-list>
+                    <ion-item ng-click="go('/men')">Men</ion-item>
+                </ion-list>
+                <ion-list>
+                    <ion-item class="btn-about" ng-click="go('/about')">About Vintage Violet</ion-item>
+                </ion-list>
+                <ion-list>
+                    <ion-item class="btn-contact" ng-click="go('/contact')">Contact</ion-item>
+                </ion-list>
+
+                <md-content  class="buttons" style="text-align: center; background-color: white; position: relative;">
+                    <md-button class="md-raised md-warn" ng-click="go('/login')" style="font-size: 12px;">{{ button_loggin }}</md-button>
+                    <md-button class="md-raised md-warn" ng-click="go('/register')" style="font-size: 12px;">{{ button_register }}</md-button>
+                </md-content>
+            </ion-side-menu>
+
+        </ion-side-menus>
+    </ion-pane>
+
+<!-- MY APP -->
+<script src="app.js"></script>
+<script src="services/clothes.service.js"></script>
+<script src="services/cart.service.js"></script>
+
+</body>
+</html>
